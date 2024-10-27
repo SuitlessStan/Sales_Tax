@@ -34,7 +34,10 @@ function App() {
 
   return (
     <div className="App">
-      <div className="container my-40 mx-auto p-4">
+      <div className="flex justify-center">
+        <img height="200" width="200" alt="calc" src="/OIP.jpeg" />
+      </div>
+      <div className="container mx-auto p-4">
         <h1 className="text-2xl font-bold mb-4">Sales Tax Calculator</h1>
         <ItemForm clearStats={clearStats} addItem={addItem} />
         <SelectState selectedState={selectedState} setSelectedState={setSelectedState} />

@@ -13,20 +13,6 @@ describe("ItemForm Component", () => {
     expect(screen.getByRole("button", { name: /clear/i })).toBeInTheDocument()
   })
 
-  // test("shows error when item name is empty", () => {
-  //   render(<ItemForm addItem={mockAddItem} />)
-  //   fireEvent.click(screen.getByRole("button", { name: /add item/i }))
-  //   expect(screen.getByText(/item name is required/i)).toBeInTheDocument()
-  // })
-
-  // test("shows error message if item cost is invalid", () => {
-  //   render(<ItemForm addItem={mockAddItem} />)
-  //   fireEvent.change(screen.getByPlaceholderText("Item Name"), { target: { value: "Apple" } })
-  //   fireEvent.change(screen.getByPlaceholderText("Item Cost"), { target: { value: "-5" } })
-  //   fireEvent.click(screen.getByRole("button", { name: /add item/i }))
-  //   expect(screen.getByText(/please enter a valid cost greater than 0/i)).toBeInTheDocument()
-  // })
-
   test("calls addItem with correct data on valid submit", () => {
     render(<ItemForm addItem={mockAddItem} />)
     fireEvent.change(screen.getByPlaceholderText("Item Name"), { target: { value: "Apple" } })
